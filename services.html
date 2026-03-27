@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - Healthy Hills Consulting Inc.</title>
+    <meta name="description" content="Healthcare advisory and operational consulting services for government, Indigenous, rural, and pharmacy settings.">
+    <link rel="icon" type="image/png" href="image.png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header>
+        <div class="header-inner">
+            <a class="brand" href="index.html#top" aria-label="Healthy Hills Consulting Inc. (Homepage)">
+                <img class="brand-icon" src="image.png" alt="" aria-hidden="true">
+                <span class="brand-name">HEALTHY HILLS CONSULTING INC.</span>
+            </a>
+            <nav aria-label="Primary navigation">
+                <a href="index.html">Home</a>
+                <a href="services.html">Services</a>
+                <a href="index.html#clients">Who We Work With</a>
+                <a href="index.html#contact">Contact</a>
+            </nav>
+            <button class="mobile-menu-btn" type="button" data-menu-toggle aria-controls="mobile-menu" aria-expanded="false">
+                <span class="sr-only">Open menu</span>
+                <svg class="mobile-menu-icon" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                    <path d="M4 6h16M4 12h16M4 18h16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <div class="mobile-menu" id="mobile-menu" hidden>
+        <div class="mobile-menu-overlay" data-menu-overlay></div>
+        <div class="mobile-menu-sheet" role="dialog" aria-modal="true" aria-label="Menu">
+            <div class="mobile-menu-bar">
+                <a class="brand" href="index.html#top" aria-label="Healthy Hills Consulting Inc. (Homepage)">
+                    <img class="brand-icon" src="image.png" alt="" aria-hidden="true">
+                    <span class="brand-name">HEALTHY HILLS CONSULTING INC.</span>
+                </a>
+                <button class="mobile-menu-close" type="button" data-menu-close aria-label="Close menu">
+                    <svg class="mobile-menu-icon" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                        <path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="mobile-menu-panel" aria-label="Menu links">
+                <a class="mobile-menu-item" href="index.html#about">About</a>
+                <a class="mobile-menu-item" href="services.html">Services</a>
+                <a class="mobile-menu-item" href="index.html#clients">Who We Serve</a>
+                <a class="mobile-menu-item" href="index.html#contact">Contact</a>
+            </div>
+        </div>
+    </div>
+
+    <main id="main">
+        <section class="hero">
+            <div class="wrapper hero-grid">
+                <div>
+                    <div class="eyebrow">Services</div>
+                    <h1>Targeted consulting support across healthcare systems, community settings, and pharmacy practice.</h1>
+                    <p>
+                        Our services are designed for organizations seeking practical advisory support that is thoughtful,
+                        credible, and shaped by implementation realities.
+                    </p>
+                    <!-- <div class="trust-row" aria-label="Service attributes">
+                        <span class="pill">Program design</span>
+                        <span class="pill">Operational improvement</span>
+                        <span class="pill">Clinical content review</span>
+                    </div> -->
+                </div>
+
+                <div class="hero-panel" aria-label="How we help">
+                    <h3>How we help</h3>
+                    <p>
+                        We support planning, program design, operational improvement, and practice leadership where context matters.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <div class="wrapper">
+                <div class="card-grid">
+                    <div class="card">
+                        <h3>Government and public sector advisory</h3>
+                        <p>
+                            Advisory support for healthcare planning, implementation, service design, and strategy informed
+                            by direct operational experience.
+                        </p>
+                    </div>
+                    <div class="card">
+                        <h3>Indigenous and rural health consulting</h3>
+                        <p>
+                            Consulting support for organizations serving Indigenous, rural, and remote communities,
+                            with attention to access, continuity, and grounded delivery models.
+                        </p>
+                    </div>
+                    <div class="card">
+                        <h3>Pharmacy leadership and operations</h3>
+                        <p>
+                            Support for pharmacy operators and healthcare organizations seeking stronger workflows,
+                            service development, and sustainable practice operations.
+                        </p>
+                    </div>
+                    <div class="card">
+                        <h3>Program and content advisory</h3>
+                        <p>
+                            Professional input for healthcare content, clinical initiatives, and education-focused projects
+                            requiring informed review and strategic guidance.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="footer-inner">
+                © 2026 Healthy Hills Consulting Inc.
+            </div>
+        </footer>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
