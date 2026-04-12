@@ -1202,8 +1202,8 @@ footer {
         border: 0;
         background: transparent;
         box-shadow: none;
-        display: flex;
-        flex-wrap: wrap;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
         gap: 10px;
     }
 
@@ -1222,11 +1222,11 @@ footer {
     }
 
     body.btc-mobile-header .mobile-menu-item-wide-label {
-        max-width: 100%;
+        min-width: 0;
     }
 
     body.btc-mobile-header .mobile-menu-item-full {
-        flex: 1 1 100%;
+        grid-column: 1 / -1;
         width: 100%;
     }
 
