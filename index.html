@@ -9,7 +9,7 @@
 	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="styles.css">
 </head>
-<body id="top" class="splash-active index-mobile-tabs">
+<body id="top" class="splash-active btc-mobile-header index-mobile-header">
     <div class="splash" id="splash" role="dialog" aria-modal="true" aria-label="Welcome to Healthy Hills Consulting Inc.">
         <img class="splash-logo" src="image1.png" alt="Healthy Hills Consulting Inc. logo">
     </div>
@@ -27,8 +27,43 @@
                 <a href="#contact">Contact</a>
                 <a href="behind-the-counter.html">Behind the counter</a>
             </nav>
+            <button class="mobile-menu-btn" type="button" data-menu-toggle aria-controls="mobile-menu"
+                aria-expanded="false" aria-label="Open menu">
+                <svg class="mobile-menu-icon" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"
+                    focusable="false">
+                    <path class="menu-icon-open" d="M4 6h16M4 12h16M4 18h16" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" />
+                    <path class="menu-icon-close" d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" />
+                </svg>
+            </button>
         </div>
     </header>
+    <div class="mobile-menu" id="mobile-menu" hidden>
+        <div class="mobile-menu-overlay" data-menu-overlay></div>
+        <div class="mobile-menu-sheet" role="dialog" aria-modal="true" aria-label="Menu">
+            <div class="mobile-menu-bar">
+                <a class="brand" href="#top" aria-label="Healthy Hills Consulting Inc. (Back to top)">
+                    <img class="brand-icon" src="image.png" alt="" aria-hidden="true">
+                    <span class="brand-name">HEALTHY HILLS CONSULTING&nbsp;INC.</span>
+                </a>
+                <button class="mobile-menu-close" type="button" data-menu-close aria-label="Close menu">
+                    <svg class="mobile-menu-icon" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"
+                        focusable="false">
+                        <path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" />
+                    </svg>
+                </button>
+            </div>
+            <div class="mobile-menu-panel" aria-label="Menu links">
+                <a class="mobile-menu-item" href="#about">About</a>
+                <a class="mobile-menu-item" href="services.html">Services</a>
+                <a class="mobile-menu-item mobile-menu-item-full" href="#clients">Who We Work With</a>
+                <a class="mobile-menu-item mobile-menu-item-wide-label" href="#contact">Contact</a>
+                <a class="mobile-menu-item mobile-menu-item-full" href="behind-the-counter.html">Behind the counter</a>
+            </div>
+        </div>
+    </div>
 
 <main id="main" aria-hidden="true">
         <section class="hero">
