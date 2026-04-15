@@ -51,10 +51,6 @@ a:focus-visible {
     border-radius: 8px;
 }
 
-body.splash-active {
-    overflow: hidden;
-}
-
 .sr-only {
     position: absolute;
     width: 1px;
@@ -84,33 +80,6 @@ body.splash-active {
 .skip-link:focus {
     transform: translateY(0);
 }
-
-/* Splash */
-.splash {
-    position: fixed;
-    inset: 0;
-    z-index: 3000;
-    display: grid;
-    place-items: center;
-    background: #ffffff;
-    transition: opacity 0.4s ease, visibility 0.4s ease;
-    cursor: pointer;
-}
-
-body.splash-done .splash {
-    opacity: 0;
-    visibility: hidden;
-}
-
-.splash-logo {
-    width: 100vw;
-    height: 100vh;
-    object-fit: contain;
-    object-position: center;
-    padding: clamp(12px, 3vw, 28px);
-    box-sizing: border-box;
-}
-
 
 img {
     max-width: 100%;
@@ -1164,6 +1133,29 @@ footer {
         text-align: center;
     }
 
+    body.services-mobile-header .header-inner {
+        align-items: center;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 10px 16px 6px;
+    }
+
+    body.services-mobile-header .mobile-menu-btn {
+        display: inline-flex;
+        order: 1;
+        margin-right: 0;
+        margin-left: 12px;
+    }
+
+    body.services-mobile-header .brand {
+        order: 0;
+        max-width: none;
+    }
+
+    body.services-mobile-header nav {
+        display: none;
+    }
+
     body.btc-mobile-header .header-inner {
         align-items: center;
         flex-direction: row;
@@ -1425,7 +1417,4 @@ footer {
         background: rgba(9, 14, 22, 0.70);
     }
 
-    .splash {
-        background: #070b12;
-    }
 }

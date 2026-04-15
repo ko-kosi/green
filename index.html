@@ -9,10 +9,7 @@
 	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="styles.css">
 </head>
-<body id="top" class="splash-active btc-mobile-header index-mobile-header">
-    <div class="splash" id="splash" role="dialog" aria-modal="true" aria-label="Welcome to Healthy Hills Consulting Inc.">
-        <img class="splash-logo" src="image1.png" alt="Healthy Hills Consulting Inc. logo">
-    </div>
+<body id="top" class="btc-mobile-header index-mobile-header">
     <a class="skip-link" href="#main">Skip to content</a>
     <header>
         <div class="header-inner">
@@ -65,7 +62,7 @@
         </div>
     </div>
 
-<main id="main" aria-hidden="true">
+<main id="main">
         <section class="hero">
             <div class="wrapper hero-grid">
                 <div>
@@ -209,56 +206,3 @@
 <script src="script.js"></script>
 </body>
 </html>
-<script>
-    (function () {
-        var splash = document.getElementById('splash');
-        var main = document.getElementById('main');
-        var timeoutId = null;
-        var done = false;
-        var storageKey = 'hhc_splash_seen';
-
-        function finishSplash() {
-            if (done) return;
-            done = true;
-            if (timeoutId) window.clearTimeout(timeoutId);
-
-            document.body.classList.remove('splash-active');
-            document.body.classList.add('splash-done');
-            if (main) main.removeAttribute('aria-hidden');
-            if (splash) splash.setAttribute('aria-hidden', 'true');
-
-            try {
-                sessionStorage.setItem(storageKey, '1');
-            } catch (e) {
-                // Ignore storage errors (e.g., private mode)
-            }
-
-            if (splash) {
-                splash.addEventListener('transitionend', function () {
-                    splash.remove();
-                }, { once: true });
-            }
-        }
-
-        var hasSeen = false;
-        try {
-            hasSeen = sessionStorage.getItem(storageKey) === '1';
-        } catch (e) {
-            hasSeen = false;
-        }
-
-        if (hasSeen) {
-            document.body.classList.remove('splash-active');
-            if (main) main.removeAttribute('aria-hidden');
-            if (splash) splash.remove();
-            return;
-        }
-
-        if (splash) splash.addEventListener('click', finishSplash);
-        document.addEventListener('keydown', function (e) {
-            if (e.key === 'Escape' || e.key === 'Enter') finishSplash();
-        });
-
-        timeoutId = window.setTimeout(finishSplash, 3000);
-    })();
-</script>
